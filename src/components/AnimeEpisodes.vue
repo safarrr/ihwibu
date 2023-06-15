@@ -79,10 +79,6 @@ export default {
         const data = await response.json()
 
         if (data && data.data) {
-          console.log(data)
-          if (data.meta.count === 0) {
-            this.loading = false
-          }
           this.totalEpisodes = data.meta.count
           this.episodes = this.episodes.concat(data.data)
           this.offset += this.limit
