@@ -2,7 +2,9 @@ import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import AnimeView from '../views/anime/AnimeView.vue'
 import AnimeDetailView from '../views/anime/AnimeDetailView.vue'
+import AnimeDetailCategories from '../views/anime/AnimeDetailCategoriesView.vue'
 import AnimeCategories from '../views/anime/AnimeCategoriesView.vue'
+import AnimeSearchView from '../views/anime/AnimeSearchView.vue'
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -17,9 +19,19 @@ const router = createRouter({
       component: AnimeView
     },
     {
-      path: '/anime/categorie/:categories',
+      path: '/anime/search',
+      name: 'animeSearch',
+      component: AnimeSearchView
+    },
+    {
+      path: '/anime/categorie',
       name: 'animeCategories',
       component: AnimeCategories
+    },
+    {
+      path: '/anime/categorie/:categories',
+      name: 'animeDetailCategories',
+      component: AnimeDetailCategories
     },
     {
       path: '/anime/:id',

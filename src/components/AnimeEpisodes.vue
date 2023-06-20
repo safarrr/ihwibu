@@ -1,10 +1,12 @@
 <template>
-  <h1 class="mx-5 text-center font-semibold">Total episodes {{ totalEpisodes }}</h1>
+  <h1 class="mx-5 text-center font-semibold bg-white rounded-lg mb-5 p-5">
+    Total episodes {{ totalEpisodes }}
+  </h1>
   <div class="flex flex-wrap justify-center items-center gap-5 rounded-xl">
     <div
       v-for="(episode, i) in episodes"
       :key="i"
-      class="flex flex-col p-5 hover:scale-110 shadow-lg rounded-lg"
+      class="flex flex-col p-5 hover:scale-110 shadow-lg rounded-lg bg-white"
     >
       <img
         :src="episode.attributes.thumbnail ? episode.attributes.thumbnail.original : posterImage"
@@ -19,17 +21,17 @@
       <h2 v-if="episode.attributes.canonicalTitle" class="text-sm w-36">
         {{ episode.attributes.canonicalTitle }}
       </h2>
-      <p class="text-xs">(Created: {{ formatDate(episode.attributes.airdate) }}}</p>
+      <p class="text-xs">({{ formatDate(episode.attributes.airdate) }}}</p>
     </div>
     <button
-      class="w-40 md:w-48 h-40 md:h-48 p-5 hover:scale-110 shadow-lg rounded-lg"
+      class="w-40 md:w-48 h-40 md:h-48 p-5 hover:scale-110 shadow-lg bg-white rounded-lg"
       v-if="!loading && hasMore"
       @click="loadMore"
     >
       Load More
     </button>
     <h1
-      class="flex items-center justify-center w-40 md:w-48 h-40 md:h-48 p-5 hover:scale-110 shadow-lg rounded-lg"
+      class="flex items-center justify-center w-40 md:w-48 h-40 md:h-48 p-5 hover:scale-110 shadow-lg bg-white rounded-lg"
       v-if="loading"
     >
       Loading...

@@ -1,3 +1,15 @@
+<template>
+  <h1 class="text-center font-bold text-2xl mb-5">Anime {{ year }}</h1>
+  <div class="flex flex-wrap justify-center items-center gap-3 z-0">
+    <CardAnime
+      v-for="data in animeData"
+      :key="data.id"
+      :title="data.attributes.canonicalTitle"
+      :id="data.id"
+      :imageUrl="data.attributes.posterImage.medium"
+    />
+  </div>
+</template>
 <script>
 import CardAnime from './CardAnime.vue'
 export default {
@@ -28,15 +40,3 @@ export default {
   }
 }
 </script>
-<template>
-  <h1 class="text-center font-bold text-2xl mb-5">Anime {{ year }}</h1>
-  <div class="flex flex-wrap justify-center items-center gap-3 z-0">
-    <CardAnime
-      v-for="data in animeData"
-      :key="data.id"
-      :title="data.attributes.canonicalTitle"
-      :id="data.id"
-      :imageUrl="data.attributes.posterImage.medium"
-    />
-  </div>
-</template>

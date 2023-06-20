@@ -3,6 +3,7 @@ import { RouterLink } from 'vue-router'
 import HeroImage from '@/assets/hero.png'
 </script>
 <template>
+  <!-- TODO https://waifu.pics/docs -->
   <main>
     <section
       class="w-full flex flex-col justify-center items-center h-screen bg-cover bg-center text-white"

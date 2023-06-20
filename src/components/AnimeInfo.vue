@@ -1,3 +1,54 @@
+<template>
+  <div
+    v-if="animeData"
+    class="flex flex-col sm:flex-row justify-center gap-3 p-5 bg-white rounded-lg"
+  >
+    <div class="flex flex-col items-center">
+      <h1 class="font-bold text-xl">Trailer</h1>
+      <iframe
+        class="rounded-lg"
+        :src="'https://www.youtube.com/embed/' + animeData.attributes.youtubeVideoId"
+      >
+      </iframe>
+    </div>
+    <div class="flex flex-col">
+      <h1 class="font-bold text-xl">Anime Details</h1>
+      <div>
+        <h2 class="font-semibold">Alternative Titles</h2>
+        <p class="text-sm" v-for="(data, i) in animeData.attributes.titles" :key="i">
+          {{ data }}
+        </p>
+        <p class="text-sm" v-for="(data, i) in animeData.attributes.abbreviatedTitles" :key="i">
+          {{ data }}
+        </p>
+      </div>
+      <div class="flex flex-col">
+        <h2 class="font-semibold">Type</h2>
+        <p class="text-sm">{{ animeData.attributes.showType }}</p>
+      </div>
+      <div class="flex flex-col">
+        <h2 class="font-semibold">Age rating</h2>
+        <p class="text-sm">
+          {{ animeData.attributes.ageRating }} - {{ animeData.attributes.ageRatingGuide }}
+        </p>
+      </div>
+      <div class="flex flex-col">
+        <h2 class="font-semibold">Categories</h2>
+        <div class="flex flex-wrap justify-start w-full mt-2">
+          <span
+            v-for="(category, i) in animeData.categories"
+            :key="i"
+            class="px-5 py-2 gap-2 rounded-full text-xs font-semibold w-max hover:text-white hover:bg-blue-500 h-max"
+          >
+            <RouterLink :to="`/anime/categorie/${category.attributes.slug}`">{{
+              category.attributes.title
+            }}</RouterLink>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
 <script>
 import { RouterLink } from 'vue-router'
 export default {
@@ -39,52 +90,3 @@ export default {
   }
 }
 </script>
-<template>
-  <div v-if="animeData" class="flex flex-col sm:flex-row justify-center gap-3 p-5">
-    <div class="flex flex-col items-center">
-      <h1 class="font-bold text-xl">Trailer</h1>
-      <iframe
-        class="rounded-lg"
-        :src="'https://www.youtube.com/embed/' + animeData.attributes.youtubeVideoId"
-      >
-      </iframe>
-    </div>
-    <div class="flex flex-col">
-      <h1 class="font-bold text-xl">Anime Details</h1>
-      <div>
-        <h2 class="font-semibold">Alternative Titles</h2>
-        <p class="text-sm" v-for="(data, i) in animeData.attributes.titles" :key="i">
-          {{ data }}
-        </p>
-        <p class="text-sm" v-for="(data, i) in animeData.attributes.abbreviatedTitles" :key="i">
-          {{ data }}
-        </p>
-      </div>
-      <div class="flex flex-col">
-        <h2 class="font-semibold">Type</h2>
-        <p class="text-sm">{{ animeData.attributes.showType }}</p>
-      </div>
-      <div class="flex flex-col">
-        <h2 class="font-semibold">Age rating</h2>
-        <p class="text-sm">
-          {{ animeData.attributes.ageRating }} - {{ animeData.attributes.ageRatingGuide }}
-        </p>
-      </div>
-      <div class="flex flex-col">
-        <h2 class="font-semibold">Categories</h2>
-        <div class="flex flex-wrap justify-start w-full mt-2">
-          <!-- TODO buat komponet dan call url https://kitsu.io/api/edge/anime?filter[categories]={anime katergori di sini}&page[limit]=15&sort=-user_count -->
-          <span
-            v-for="(category, i) in animeData.categories"
-            :key="i"
-            class="px-5 py-2 gap-2 rounded-full text-xs font-semibold w-max hover:text-white hover:bg-blue-500 h-max"
-          >
-            <RouterLink :to="`/anime/categorie/${category.attributes.slug}`">{{
-              category.attributes.title
-            }}</RouterLink>
-          </span>
-        </div>
-      </div>
-    </div>
-  </div>
-</template>

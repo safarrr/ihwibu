@@ -1,21 +1,4 @@
-<script>
-import { RouterLink } from 'vue-router'
-export default {
-  components: {
-    RouterLink
-  },
-  data() {
-    return {
-      dataLink: [
-        {
-          name: 'anime',
-          link: '/anime'
-        }
-      ]
-    }
-  }
-}
-</script>
+
 <template>
   <header class="w-screen h-max fixed z-40">
     <nav
@@ -35,3 +18,21 @@ export default {
     </nav>
   </header>
 </template>
+<script>
+import { RouterLink } from 'vue-router'
+export default {
+  components: {
+    RouterLink
+  },
+  data() {
+    return {
+      dataLink: [
+        {
+          name: 'anime',
+          link: '/anime'
+        }
+      ]
+    }
+  }
+}
+</script>
