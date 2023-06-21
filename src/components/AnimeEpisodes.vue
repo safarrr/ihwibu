@@ -6,7 +6,7 @@
     <div
       v-for="(episode, i) in episodes"
       :key="i"
-      class="flex flex-col p-5 hover:scale-110 shadow-lg rounded-lg bg-white gap-2"
+      class="flex flex-col p-5 hover:scale-110 shadow-lg rounded-lg bg-white m-2"
     >
       <img
         :src="episode.attributes.thumbnail ? episode.attributes.thumbnail.original : posterImage"
