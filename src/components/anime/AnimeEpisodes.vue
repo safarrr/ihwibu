@@ -6,7 +6,7 @@
     <div
       v-for="(episode, i) in episodes"
       :key="i"
-      class="flex flex-col p-5 hover:scale-110 shadow-lg rounded-lg bg-white"
+      class="flex flex-col p-5 hover:scale-110 shadow-lg rounded-lg bg-white m-2"
     >
       <img
         :src="episode.attributes.thumbnail ? episode.attributes.thumbnail.original : posterImage"
@@ -21,7 +21,7 @@
       <h2 v-if="episode.attributes.canonicalTitle" class="text-sm w-36">
         {{ episode.attributes.canonicalTitle }}
       </h2>
-      <p class="text-xs">({{ formatDate(episode.attributes.airdate) }}}</p>
+      <p class="text-xs">({{ formatDate(episode.attributes.airdate) }})</p>
     </div>
     <button
       class="w-40 md:w-48 h-40 md:h-48 p-5 hover:scale-110 shadow-lg bg-white rounded-lg"
