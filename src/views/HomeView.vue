@@ -3,7 +3,6 @@ import { RouterLink } from 'vue-router'
 import HeroImage from '@/assets/hero.png'
 </script>
 <template>
-  <!-- TODO https://waifu.pics/docs -->
   <main>
     <section
       class="w-full flex flex-col justify-center items-center h-screen bg-cover bg-center text-white"
@@ -25,17 +24,17 @@ import HeroImage from '@/assets/hero.png'
             >Temukan</RouterLink
           >
         </div>
-        <!-- <div
+        <div
           class="bg-white flex flex-col items-center p-5 rounded-2xl backdrop-blur-md bg-white/20 transition-all hover:scale-105 ease-linear delay-100"
         >
-          <h1 class="text-2xl font-bold">Waifu</h1>
-          <p class="text-sm">temukan waifu atau ngesimp anime</p>
+          <h1 class="text-2xl font-bold">Art</h1>
+          <p class="text-sm">art anime</p>
           <RouterLink
-            to="/waifu"
+            to="/art"
             class="w-full text-center px-3 py-2 hover:bg-white hover:text-black mt-2 rounded-lg"
             >Temukan</RouterLink
           >
-        </div> -->
+        </div>
       </div>
     </section>
   </main>

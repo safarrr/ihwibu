@@ -23,7 +23,7 @@
 </template>
 
 <script>
-import CardAnime from '@/components/CardAnime.vue'
+import CardAnime from '@/components/anime/CardAnime.vue'
 export default {
   components: {
     CardAnime

@@ -16,8 +16,8 @@
   </section>
 </template>
 <script>
-import TheAnimeTrending from '../../components/TheAnimeTrending.vue'
-import TheAnimeSeasonYear from '../../components/TheAnimeSeasonYear.vue'
+import TheAnimeTrending from '../../components/anime/TheAnimeTrending.vue'
+import TheAnimeSeasonYear from '../../components/anime/TheAnimeSeasonYear.vue'
 import { RouterLink } from 'vue-router'
 export default {
   // data() {

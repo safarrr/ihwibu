@@ -5,6 +5,7 @@ import AnimeDetailView from '../views/anime/AnimeDetailView.vue'
 import AnimeDetailCategories from '../views/anime/AnimeDetailCategoriesView.vue'
 import AnimeCategories from '../views/anime/AnimeCategoriesView.vue'
 import AnimeSearchView from '../views/anime/AnimeSearchView.vue'
+import ArtView from '../views/art/ArtView.vue'
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -41,14 +42,19 @@ const router = createRouter({
         {
           name: 'animeInfo',
           path: 'details',
-          component: () => import('../components/AnimeInfo.vue')
+          component: () => import('../components/anime/AnimeInfo.vue')
         },
         {
           name: 'animeEpisodes',
           path: 'episodes',
-          component: () => import('../components/AnimeEpisodes.vue')
+          component: () => import('../components/anime/AnimeEpisodes.vue')
         }
       ]
+    },
+    {
+      path: '/art',
+      name: 'art',
+      component: ArtView
     }
   ]
 })
