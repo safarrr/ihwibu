@@ -34,7 +34,7 @@
     <ul
       :class="`${
         openNav ? 'flex' : 'hidden'
-      } flex-col justify-center items-center md:hidden backdrop-blur-md bg-slate-500/50 mx-5 rounded-xl p-5 space-y-3`"
+      } flex-col justify-center items-center md:hidden backdrop-blur-md bg-slate-500/50 mx-5 rounded-xl p-5 space-y-3 text-white`"
     >
       <li v-for="(item, i) in dataLink" :key="i">
         <RouterLink
@@ -58,12 +58,20 @@ export default {
       openNav: false,
       dataLink: [
         {
+          name: 'about',
+          link: '/about'
+        },
+        {
           name: 'anime',
           link: '/anime'
         },
         {
           name: 'art',
           link: '/art'
+        },
+        {
+          name: 'quotes',
+          link: '/quotes'
         }
       ]
     }
