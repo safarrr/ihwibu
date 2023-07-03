@@ -1,6 +1,7 @@
 <template>
   <section>
-    <ul v-if="quotes > 0" class="space-y-3">
+    <h1 v-if="quotes.length > 0">Anime tidak ada</h1>
+    <ul v-else class="space-y-3">
       <li v-for="(data, i) in quotes" :key="i">
         <div
           class="flex flex-col items-center w-full lg:w-[60%] lg:mx-auto bg-white p-5 rounded-lg outline-none hover:scale-110 transition-transform ease-linear"
@@ -28,7 +29,6 @@
         </button>
       </li>
     </ul>
-    <h1 v-else>anime tidak ada</h1>
   </section>
 </template>
 <script>
