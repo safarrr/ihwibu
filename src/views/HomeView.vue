@@ -5,7 +5,7 @@ import HeroImage from '@/assets/hero.jpg'
 <template>
   <main>
     <section
-      class="w-full flex flex-col justify-center items-center h-max md:h-screen bg-cover bg-center text-white p-5"
+      class="w-full flex flex-col justify-center items-center sm:h-screen bg-cover bg-center text-white p-5 pt-[100px] sm:py-0"
       :style="{ backgroundImage: `url(${HeroImage})` }"
     >
       <h1 class="text-xl font-bold">Ih Wibu</h1>

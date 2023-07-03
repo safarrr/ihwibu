@@ -15,11 +15,11 @@
       >
     </p>
     <h2 class="text-lg font-semibold text-center mt-5">Fitur</h2>
-    <ul class="flex flex-col md:flex-row items-center justify-center gap-4 text-center">
+    <ul class="flex flex-col md:flex-row items-center justify-center text-center">
       <li
         v-for="(data, i) in fitur"
         :key="i"
-        class="flex flex-col p-3 bg-neutral-100 rounded-lg w-60"
+        class="flex flex-col p-3 bg-neutral-100 rounded-lg w-60 m-2"
       >
         <h3 class="text-bold capitalize">{{ data.name }}</h3>
         <p class="text-xs">{{ data.description }}</p>

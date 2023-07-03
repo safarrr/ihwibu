@@ -1,6 +1,6 @@
 <template>
   <!-- https://katanime.vercel.app/developer-api -->
-  <section class="flex flex-col gap-3">
+  <section class="flex flex-col space-y-3">
     <div
       v-for="(data, i) in quotes"
       :key="i"

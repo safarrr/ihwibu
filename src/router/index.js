@@ -8,6 +8,8 @@ import AnimeCategories from '../views/anime/AnimeCategoriesView.vue'
 import AnimeSearchView from '../views/anime/AnimeSearchView.vue'
 import ArtView from '../views/art/ArtView.vue'
 import QuotesView from '../views/quotes/QuotesView.vue'
+import QuotesAnimeListView from '../views/quotes/QuotesAnimeListView.vue'
+import QuotesAnimeView from '../views/quotes/QuotesAnimeView.vue'
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -67,6 +69,16 @@ const router = createRouter({
       path: '/quotes',
       name: 'quotes',
       component: QuotesView
+    },
+    {
+      path: '/quotes/list',
+      name: 'quotesList',
+      component: QuotesAnimeListView
+    },
+    {
+      path: '/quotes/:anime',
+      name: 'quotesAnime',
+      component: QuotesAnimeView
     }
   ]
 })
