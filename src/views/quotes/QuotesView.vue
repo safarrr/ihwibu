@@ -1,6 +1,14 @@
 <template>
   <!-- https://katanime.vercel.app/developer-api -->
   <section class="flex flex-col space-y-3">
+    <div class="flex flex-col bg-white items-center p-5">
+      <h1 class="text-lg font-bold">Link</h1>
+      <div class="flex flex-row space-x-3">
+        <RouterLink to="/quotes/list" class="hover:underline hover:text-blue-500"
+          >categories by anime</RouterLink
+        >
+      </div>
+    </div>
     <div
       v-for="(data, i) in quotes"
       :key="i"
