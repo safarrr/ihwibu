@@ -11,7 +11,7 @@ import QuotesView from '../views/quotes/QuotesView.vue'
 import QuotesAnimeListView from '../views/quotes/QuotesAnimeListView.vue'
 import QuotesAnimeView from '../views/quotes/QuotesAnimeView.vue'
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
       path: '/',
