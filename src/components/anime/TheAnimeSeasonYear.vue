@@ -16,7 +16,7 @@ export default {
   data() {
     return {
       animeData: [],
-      year: new Date().toLocaleDateString('id-ID', { year: 'numeric' }) - 1
+      year: new Date().toLocaleDateString('id-ID', { year: 'numeric' })
     }
   },
   mounted() {
