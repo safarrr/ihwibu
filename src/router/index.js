@@ -11,7 +11,7 @@ import QuotesView from '../views/quotes/QuotesView.vue'
 import QuotesAnimeListView from '../views/quotes/QuotesAnimeListView.vue'
 import QuotesAnimeView from '../views/quotes/QuotesAnimeView.vue'
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
+  history: createWebHistory(),
   routes: [
     {
       path: '/',
@@ -28,6 +28,7 @@ const router = createRouter({
       name: 'anime',
       component: AnimeView
     },
+
     {
       path: '/anime/search',
       name: 'animeSearch',
@@ -43,6 +44,7 @@ const router = createRouter({
       name: 'animeDetailCategories',
       component: AnimeDetailCategories
     },
+
     {
       path: '/anime/:id',
       name: 'animeId',
